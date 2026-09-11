@@ -1,0 +1,21 @@
+# KiCad backups and autosave
+*-backups/
+_autosave-*
+*.bak
+*.kicad_pcb-bak
+*.kicad_sch-bak
+fp-info-cache
+
+# KiCad lock files
+*.lck
+
+# KiCad plot/fabrication output
+/plot/
+/gerber/
+/fab/
+
+# Project local settings (machine-specific)
+*.kicad_prl
+
+# OS files
+.DS_Store
