@@ -17,5 +17,15 @@ fp-info-cache
 # Project local settings (machine-specific)
 *.kicad_prl
 
+# KiCad legacy rescue artifacts
+rescue-backup/
+*-rescue.lib
+*-rescue.dcm
+*-cache.lib
+report.txt
+
+# Editor local history
+.history/
+
 # OS files
 .DS_Store
