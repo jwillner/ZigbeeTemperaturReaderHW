@@ -1,0 +1,185 @@
+EESchema Schematic File Version 4
+LIBS:ZigbeeTemperaturReaderHW-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+Sheet 1 1
+Title "Zigbee Temperatur Reader"
+Date "2026-09-11"
+Rev "0.1"
+Comp "JoWizard"
+Comment1 "Vorlauf- und Ruecklaufmessung mit zwei DS18B20"
+Comment2 "ESP32-C6-Zero / SSD1306 OLED"
+$EndDescr
+$Comp
+L Conn_01x09 A1
+U 1 1 1
+P 3000 3200
+F 0 "A1" H 2918 3817 50  0000 C CNN
+F 1 "ESP32-C6-Zero" H 2918 3726 50 0000 C CNN
+F 2 "Modules:ESP32-C6-Zero" H 3000 3200 50 0001 C CNN
+	1    3000 3200
+	1    0 0 -1
+$EndComp
+$Comp
+L Conn_01x04 J1
+U 1 1 2
+P 5200 2200
+F 0 "J1" H 5280 2192 50 0000 L CNN
+F 1 "OLED-0.96-SSD1306-I2C" H 5280 2101 50 0000 L CNN
+F 2 "Modules:OLED-0.96-SSD1306-I2C" H 5200 2200 50 0001 C CNN
+	1    5200 2200
+	1    0 0 -1
+$EndComp
+$Comp
+L Conn_01x03 J2
+U 1 1 3
+P 5200 3500
+F 0 "J2" H 5280 3542 50 0000 L CNN
+F 1 "DS18B20 Vorlauf" H 5280 3451 50 0000 L CNN
+	1    5200 3500
+	1    0 0 -1
+$EndComp
+$Comp
+L Conn_01x03 J3
+U 1 1 4
+P 5200 4500
+F 0 "J3" H 5280 4542 50 0000 L CNN
+F 1 "DS18B20 Ruecklauf" H 5280 4451 50 0000 L CNN
+	1    5200 4500
+	1    0 0 -1
+$EndComp
+$Comp
+L Conn_01x02 J4
+U 1 1 5
+P 5200 5700
+F 0 "J4" H 5280 5692 50 0000 L CNN
+F 1 "3V3 Versorgung" H 5280 5601 50 0000 L CNN
+	1    5200 5700
+	1    0 0 -1
+$EndComp
+$Comp
+L R R1
+U 1 1 6
+P 4100 4000
+F 0 "R1" H 4170 4046 50 0000 L CNN
+F 1 "4.7k" H 4170 3955 50 0000 L CNN
+	1    4100 4000
+	1    0 0 -1
+$EndComp
+$Comp
+L C C1
+U 1 1 7
+P 4100 4900
+F 0 "C1" H 4215 4946 50 0000 L CNN
+F 1 "100nF" H 4215 4855 50 0000 L CNN
+	1    4100 4900
+	1    0 0 -1
+$EndComp
+$Comp
+L +3V3 #PWR01
+U 1 1 8
+P 3900 1900
+F 0 "#PWR01" H 3900 1750 50 0001 C CNN
+F 1 "+3V3" H 3915 2073 50 0000 C CNN
+	1    3900 1900
+	1    0 0 -1
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 9
+P 3900 6000
+F 0 "#PWR02" H 3900 5750 50 0001 C CNN
+F 1 "GND" H 3905 5827 50 0000 C CNN
+	1    3900 6000
+	1    0 0 -1
+$EndComp
+Wire Wire Line
+	3900 1900 3900 2100
+Wire Wire Line
+	3900 2100 5000 2100
+Text Label 4400 2100 0 50 ~ 0
++3V3
+Wire Wire Line
+	5000 2200 4700 2200
+Text Label 4700 2200 2 50 ~ 0
+GND
+Wire Wire Line
+	5000 2300 4600 2300
+Text Label 4600 2300 2 50 ~ 0
+OLED_SCL
+Wire Wire Line
+	5000 2400 4600 2400
+Text Label 4600 2400 2 50 ~ 0
+OLED_SDA
+Wire Wire Line
+	3200 3200 3700 3200
+Text Label 3700 3200 0 50 ~ 0
+GPIO2_ONEWIRE
+Wire Wire Line
+	3200 3300 3700 3300
+Text Label 3700 3300 0 50 ~ 0
+GPIO3_SENSOR_POWER
+Wire Wire Line
+	3200 3400 3700 3400
+Text Label 3700 3400 0 50 ~ 0
+GPIO18_OLED_SDA
+Wire Wire Line
+	3200 3500 3700 3500
+Text Label 3700 3500 0 50 ~ 0
+GPIO19_OLED_SCL
+Wire Wire Line
+	5000 3400 4600 3400
+Text Label 4600 3400 2 50 ~ 0
+GND
+Wire Wire Line
+	5000 3500 4600 3500
+Text Label 4600 3500 2 50 ~ 0
+ONEWIRE
+Wire Wire Line
+	5000 3600 4600 3600
+Text Label 4600 3600 2 50 ~ 0
+SENSOR_POWER
+Wire Wire Line
+	5000 4400 4600 4400
+Text Label 4600 4400 2 50 ~ 0
+GND
+Wire Wire Line
+	5000 4500 4600 4500
+Text Label 4600 4500 2 50 ~ 0
+ONEWIRE
+Wire Wire Line
+	5000 4600 4600 4600
+Text Label 4600 4600 2 50 ~ 0
+SENSOR_POWER
+Wire Wire Line
+	5000 5700 4600 5700
+Text Label 4600 5700 2 50 ~ 0
++3V3
+Wire Wire Line
+	5000 5800 4600 5800
+Text Label 4600 5800 2 50 ~ 0
+GND
+Wire Wire Line
+	4100 3850 4100 3300
+Wire Wire Line
+	4100 3300 3700 3300
+Wire Wire Line
+	4100 4150 4100 3500
+Wire Wire Line
+	4100 3500 4600 3500
+Wire Wire Line
+	4100 4750 4100 4600
+Wire Wire Line
+	4100 4600 4600 4600
+Wire Wire Line
+	4100 5050 4100 6000
+Wire Wire Line
+	3900 6000 4100 6000
+Text Notes 2450 1800 0 80 ~ 16
+ESP32-C6-Zero
+Text Notes 5000 1800 0 80 ~ 16
+Anschluesse
+Text Notes 3950 3700 0 50 ~ 0
+Pull-up fuer OneWire
+$EndSCHEMATC
