@@ -3652,6 +3652,31 @@
 		(layer "Edge.Cuts")
 		(uuid "d2f357bc-6fbc-4d40-ac7a-6d19e71011a0")
 	)
+	(gr_text "(c) by JoWizard 13.09.2026"
+		(at 179.07 97.79 90)
+		(layer "B.SilkS")
+		(uuid "668c019f-25a2-4a99-b221-8be5919185fe")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "TemperaturReader V1.0"
+		(at 175.895 99.695 90)
+		(layer "B.SilkS")
+		(uuid "a37501f6-4a38-45a0-b0f5-965a902d2469")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify mirror)
+		)
+	)
 	(dimension
 		(type aligned)
 		(layer "Dwgs.User")
